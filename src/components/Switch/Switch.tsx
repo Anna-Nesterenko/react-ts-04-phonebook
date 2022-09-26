@@ -1,6 +1,6 @@
 import ReactSwitch from "react-switch";
 import styled from "styled-components";
-import { IContextTheme } from "../../App";
+import { IContextTheme } from "../App";
 
 export const Switch = ({ theme, toggleTheme }: IContextTheme) => {
   return (

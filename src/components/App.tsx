@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import { nanoid } from "nanoid";
-import { Form } from "./components/Form/Form";
-import { IItems, IValues } from "./types/types";
-import { ContactList } from "./components/ContactList/ContactList";
-import { Filter } from "./components/Filter/Filter";
+import { Form } from "./Form/Form";
+import { IItems, IValues } from "../types/types";
+import { ContactList } from "./ContactList/ContactList";
+import { Filter } from "./Filter/Filter";
 import styled from "styled-components";
 import toast, { Toaster } from "react-hot-toast";
 import { createContext } from "react";
-import { Switch } from "./components/Switch/Switch";
+import { Switch } from "./Switch/Switch";
 
 export interface IContextTheme {
   theme: string;
