@@ -1,7 +1,8 @@
+import { IItems } from "../../types/types";
 import { ContactContainer, ContactEl, ContactBtn } from "./ContactList.styled";
 
 interface IPropsContacts {
-  contacts: { [key: string]: string }[];
+  contacts: IItems[];
   onDeleteContact: (contactId: string) => void;
 }
 

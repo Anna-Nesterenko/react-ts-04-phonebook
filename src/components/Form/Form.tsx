@@ -1,10 +1,6 @@
 import React, { useState } from "react";
+import { IValues } from "../../types/types";
 import { Field, ContainerForm, BtnDisabled } from "./Form.styled";
-
-export interface IValues {
-  name: string;
-  number: string;
-}
 
 interface IProps {
   onData: ({ name, number }: IValues) => void;
@@ -33,7 +29,7 @@ export function Form({ onData }: IProps) {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    onData({name, number});
+    onData({ name, number });
     setName("");
     setNumber("");
   };

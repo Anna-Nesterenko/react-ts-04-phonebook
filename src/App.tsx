@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import { nanoid } from "nanoid";
 import { Form } from "./components/Form/Form";
-import { IValues } from "./components/Form/Form";
+import { IItems, IValues } from "./types/types";
 import { ContactList } from "./components/ContactList/ContactList";
 import { Filter } from "./components/Filter/Filter";
 import styled from "styled-components";
 import toast, { Toaster } from "react-hot-toast";
 import { createContext } from "react";
 import { Switch } from "./components/Switch/Switch";
+
 export interface IContextTheme {
   theme: string;
   toggleTheme: () => void;
@@ -21,9 +22,7 @@ const getInitialContactsState = () => {
 };
 
 export function App() {
-  const [contacts, setContacts] = useState<
-    { name: string; number: string; id: string }[]
-  >(getInitialContactsState);
+  const [contacts, setContacts] = useState<IItems[]>(getInitialContactsState);
 
   const [filter, setFilter] = useState("");
   const [theme, setTheme] = useState("dark");
